@@ -4,18 +4,23 @@ import brunchMeal from "./img/brunch-meal.jpg";
 export function homePage(){
     const contentDiv = document.getElementById('content');
     const homeDiv = document.createElement('div');
+    const heading = document.createElement('h1');
+    const hr = document.createElement('hr');
+    const subheading = document.createElement('p');
+    const body = document.querySelector("body");
 
-        const heading = document.createElement('h1');
-        const subheading = document.createElement('p');
-        const body = document.querySelector("body");
 
-        heading.textContent = 'Savor';
-        subheading.textContent = 'Welcome to Savor, where great food and good company come together. Enjoy fresh, flavorful brunch made to start your day right.';
+    homeDiv.setAttribute('id', 'home-content');
+    subheading.setAttribute('id', 'home-subheading');
 
-        homeDiv.append(heading);
-        homeDiv.append(subheading);
+    heading.textContent = 'Savor';
+    subheading.textContent = 'Welcome to Savor, where great food and good company come together. Enjoy fresh, flavorful brunch made to start your day right.';
 
-        body.style.backgroundImage = `url(${brunchMeal})`;
+    homeDiv.append(heading);
+    homeDiv.append(hr);
+    homeDiv.append(subheading);
 
-        contentDiv.append(homeDiv);
+    body.style.backgroundImage = `url(${brunchMeal})`;
+
+    contentDiv.append(homeDiv);
 }

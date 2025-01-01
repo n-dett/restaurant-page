@@ -1,6 +1,8 @@
 export function aboutPage() {
     const aboutContent = document.createElement('div');
     const heading = document.createElement('h2');
+    const subheadingAddress= document.createElement('h3');
+    const subheadingHours = document.createElement('h3');
     const hoursList = document.createElement('ul');
     const address = document.createElement('p');
    
@@ -10,11 +12,15 @@ export function aboutPage() {
         hoursList.append(hoursLi);
     }
 
-    heading.textContent = "About";
+    heading.textContent = "About Savor";
+    subheadingAddress.textContent = "Address:";
+    subheadingHours.textContent = "Hours:";
     address.textContent = "123 Main Street, Chicago, Illinois";
 
     aboutContent.append(heading);
+    aboutContent.append(subheadingAddress);
     aboutContent.append(address);
+    aboutContent.append(subheadingHours);
     aboutContent.append(hoursList);
 
     document.getElementById('content').append(aboutContent);
